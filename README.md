@@ -24,5 +24,11 @@
  - baseline: 요소들을 컨테이너의 시작 위치에 정렬합니다.
  - stretch: 요소들을 컨테이너에 맞도록 늘립니다.
  
+ ### ✅ flex-direction
+ - row: 요소들을 텍스트의 방향과 동일하게 정렬합니다.
+ - row-reverse: 요소들을 텍스트의 반대 방향으로 정렬합니다.
+ - column: 요소들을 위에서 아래로 정렬합니다.
+ - column-reverse: 요소들을 아래에서 위로 정렬합니다.
+
  </div>
 </details>
