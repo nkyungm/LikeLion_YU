@@ -50,5 +50,13 @@
   ### ✅ flex-flow : flex-direction과 flex-wrap 두 속성의 값들을 인자로 받음( 두 속성을 동시에 사용가능 )
   - ex) flex-flow: row wrap;
  
+  ### ✅ align-content : 세로선 상에 여분의 공간이 있는 경우 Flex 컨테이너 사이의 간격을 조절
+ - flex-start: 여러 줄들을 컨테이너의 꼭대기에 정렬합니다.
+ - flex-end: 여러 줄들을 컨테이너의 바닥에 정렬합니다.
+ - center: 여러 줄들을 세로선 상의 가운데에 정렬합니다.
+ - space-between: 여러 줄들 사이에 동일한 간격을 둡니다.
+ - space-around: 여러 줄들 주위에 동일한 간격을 둡니다.
+ - stretch: 여러 줄들을 컨테이너에 맞도록 늘립니다.
+ 
  </div>
 </details>
