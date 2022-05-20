@@ -51,7 +51,7 @@
  - wrap: 요소들을 여러 줄에 걸쳐 정렬합니다.
  - wrap-reverse: 요소들을 여러 줄에 걸쳐 반대로 정렬합니다.
  
-  ### ✅ flex-flow : flex-direction과 flex-wrap 두 속성의 값들을 인자로 받음( 두 속성을 동시에 사용가능 )
+  ### ✅ flex-flow : flex-direction과 flex-wrap 두 속성의 값들을 인자로 받음(두 속성을 동시에 사용가능)
   - ex) flex-flow: row wrap;
  
   ### ✅ align-content : 세로선 상에 여분의 공간이 있는 경우 Flex 컨테이너 사이의 간격을 조절
