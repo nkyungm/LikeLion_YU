@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let favoriteArtist='taeyeon';
+        console.log(favoriteArtist);
+
+        const a=1;
+        const b=2;
+
+        function add(num1,num2){
+            return num1+num2;
+        }
+        const sum2=add(100,200);
+        console.log(sum2);
+
+        function hello(name){
+            console.log(`Hello, ${name}`);
+        }
+        hello('lion');
+
+        function getGrade(score){
+            if(score===100){
+                return 'A';
+            }
+            else if(score>=90){
+                return 'B';
+            }
+            else if(score>=80){
+                return 'C';
+            }
+            else if(score>=70){
+                return 'D';
+            }else{
+                return 'F';
+            }
+        }
+
+        const grade=getGrade(97);
+        console.log(grade);
+
+        const sample={
+            'key with space':true
+        };
+
+        const likelion={
+            name:'멋쟁이 사자',
+            age:10
+        }
+        console.log(likelion.age);
+
+        const numArray=[1,2,3,4,5];
+        const object=[
+            {name:'멋쟁이'},
+            {name: '사자처럼'}
+        ];
+        console.log(object[0]);
+
+        object.push(
+            {name:'자바스크립트'}
+        );
+        console.log(object);
+
+        console.log(object.length);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
