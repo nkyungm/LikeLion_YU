@@ -8,7 +8,7 @@
 ## 📝 CSS Flex(Flexible Box) 완벽 가이드
 #### https://heropy.blog/2018/11/24/css-flexible-box/
  
- ### 🔷 float 속성
+ ### 🔷 float의 속성
  ![image](https://user-images.githubusercontent.com/97418768/164005368-f78e6e59-5c4a-4c6a-9b9e-9aa2320d09fa.png)
 
 ## 📝 Flexbox Froggy
