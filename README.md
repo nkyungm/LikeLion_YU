@@ -62,5 +62,6 @@
  - space-around: 여러 줄들 주위에 동일한 간격을 둡니다.
  - stretch: 여러 줄들을 컨테이너에 맞도록 늘립니다.
  
+ 
  </div>
 </details>
