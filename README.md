@@ -1,3 +1,31 @@
+# 📌FrontEnd
+<details>
+
+<summary>HTML/CSS</summary>
+<div markdown="1">
+ 
+## 🔥 태그
+**Box**
+
+---
+
+`header` `section` `footer` `article` `nav` `div` `aside` `span` `main` `form`
+ 
+ **Item**
+
+---
+
+`a` `button` `input` `label` `img` `video` `audio` `map` `canvas` `table`
+ 
+ **태그**는 **박스(box)** 또는 **아이템(item)** 2가지로 분류할 수 있다.
+
+- `Box` : 아이템을 어떻게 배치할지 나누어주는 태그
+- `Item` : 사용자들에게 보여지는 태그
+   - `Block` : 한 줄에 한 개만 배치
+   - `Inline` : 한 줄에 여러 개 배치
+ </div>
+</details>
+
 # 📌LikeLion_YU HTML/CSS
  <details>
 
