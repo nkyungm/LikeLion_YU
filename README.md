@@ -23,6 +23,26 @@
 - `Item` : 사용자들에게 보여지는 태그
    - `Block` : 한 줄에 한 개만 배치
    - `Inline` : 한 줄에 여러 개 배치
+ ---
+ 
+ ## 블록 요소 (Block Element)
+ 
+ ![image](https://user-images.githubusercontent.com/97418768/173006109-96782c82-bb24-48d5-ad61-f977221b89e4.png)
+
+ - 가로폭 전체의 넓이를 가지는 직사각형 형태이며 `width`, `height`, `margin`, `padding` 등으로 레이아웃을 수정할 수 있다.
+- 블록 요소 다음에는 줄바꿈이 이루어진다.
+- css에서 `display:block` 으로 블록을 변경할 수 있다.
+    
+    ```css
+    div {
+    	display : block;
+    }
+    ```
+    
+- 블록 요소인 태그 종류
+    
+    `article` `aside` `div` `footer` `form` `h1` `h2` `h3` `h4` `h5` `h6` `header` `p` `section` `table` `ul` 등
+ ---
  </div>
 </details>
 
