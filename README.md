@@ -1,4 +1,4 @@
-# 📌FrontEnd
+# 💻FrontEnd
 <details>
 
 <summary>HTML/CSS</summary>
@@ -25,7 +25,7 @@
    - `Inline` : 한 줄에 여러 개 배치
  ---
  
- ### 블록 요소 (Block Element)
+ ### ⭐블록 요소 (Block Element)
  
  ![image](https://user-images.githubusercontent.com/97418768/173006109-96782c82-bb24-48d5-ad61-f977221b89e4.png)
 
@@ -44,7 +44,7 @@
     `article` `aside` `div` `footer` `form` `h1` `h2` `h3` `h4` `h5` `h6` `header` `p` `section` `table` `ul` 등
  ---
  
- ### 인라인 요소 (Inline Element)
+ ### ⭐인라인 요소 (Inline Element)
 
  ![image](https://user-images.githubusercontent.com/97418768/173202257-f52ac463-7ab9-4cef-afc3-82efe37a1017.png)
 
@@ -68,7 +68,7 @@
  </div>
 </details>
 
-# 📌LikeLion_YU HTML/CSS
+# 📙LikeLion_YU HTML/CSS
  <details>
 
 <summary>4월 7일 과제</summary>
