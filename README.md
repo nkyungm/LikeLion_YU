@@ -4,7 +4,7 @@
 <summary>HTML/CSS</summary>
 <div markdown="1">
  
-## 🔥 태그
+### 🔥 태그
 **Box**
 
 ---
@@ -25,7 +25,7 @@
    - `Inline` : 한 줄에 여러 개 배치
  ---
  
- ## 블록 요소 (Block Element)
+ ### 블록 요소 (Block Element)
  
  ![image](https://user-images.githubusercontent.com/97418768/173006109-96782c82-bb24-48d5-ad61-f977221b89e4.png)
 
@@ -43,6 +43,28 @@
     
     `article` `aside` `div` `footer` `form` `h1` `h2` `h3` `h4` `h5` `h6` `header` `p` `section` `table` `ul` 등
  ---
+ 
+ ### 인라인 요소 (Inline Element)
+
+ ![image](https://user-images.githubusercontent.com/97418768/173202257-f52ac463-7ab9-4cef-afc3-82efe37a1017.png)
+
+- 컨텐츠가 끝나는 지점까지를 넓이로 가지게 된다.
+- 임의로 `width`, `height`로 변형을 줄 수가 없다.
+- 인라인 요소는 `line-height`로 줄의 높낮이를 조절할 수 있고, `text-align`으로 텍스트의 중앙, 좌, 우측 정렬을 할 수 있다.
+- 인라인 요소 다음에는 줄바꿈이 없고 우측으로 바로 이어서 표시된다.
+- css에서 `display:inline`으로 인라인으로 변경할 수 있다.
+    
+    ```css
+    div {
+    	display : inline;
+    }
+    ```
+    
+- 인라인 블록인 태그 종류
+    
+    `a` `br` `button` `em` `i` `img` `input` `label` `select` `span` `strong` `textarea` 등
+    
+---
  </div>
 </details>
 
