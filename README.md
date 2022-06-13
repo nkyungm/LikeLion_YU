@@ -65,6 +65,32 @@
     `a` `br` `button` `em` `i` `img` `input` `label` `select` `span` `strong` `textarea` 등
     
 ---
+ 
+ ### ⭐태깅을 이용한 웹 구조화 (마크업)
+
+웹사이트에 배치를 정하는 태그가 있다. 해당 태그들을 이용하면 웹사이트의 구조를 짤 수 있다.
+ 
+ ![image](https://user-images.githubusercontent.com/97418768/173343489-a41a37c4-a589-4ba9-85bc-ed3ff9bafcbc.png)
+---
+ ### ⭐자주 사용하는 태그
+
+`div` `span` : 아이템들을 묶어서 스타일링할 때 주로 사용
+
+`div` : block level의 태그
+
+`span` : inline level의 태그
+
+`article` : 여러가지 아이템들을 재사용 가능하도록 그룹화해 놓은 것
+
+`p` : 문단을 정의
+
+`b` : 볼드체
+
+`ol` : 번호가 있는 리스트
+
+`ul` : 번호가 없는 리스트
+ 
+---
  </div>
 </details>
 
