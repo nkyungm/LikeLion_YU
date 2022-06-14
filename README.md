@@ -91,6 +91,72 @@
 `ul` : 번호가 없는 리스트
  
 ---
+ ### ⭐form
+
+- 사용자로부터 데이터를 받아야하는 경우 사용되는 요소이다.
+
+- 폼 요소는 서버에 데이터를 전달하기 위해 사용한다.
+
+```html
+<form action="" method="">
+	...
+</form>
+```
+
+`input` : 내용이 없는 빈 요소이며 type 속성을 통해 여러 종류의 입력 양식으로 나타낼 수 있다.
+
+```html
+<!-- 단순한 텍스트 입력 -->
+<input type="text">
+
+<!-- 공개할 수 없는 내용 입력 -->
+<input type="password">
+
+<!-- 라디오 버튼(중복 선택 불가능) -->
+<input type="radio">
+
+<!-- 체크박스(중복 선택 가능) -->
+<input type="checkbox">
+
+<!-- 파일을 서버에 올릴 때 사용 -->
+<input type="file">
+
+<!-- 버튼(클릭) -->
+<input type="submit">
+<input type="reset">
+<input type="button">
+```
+
+`select` : 몇 개의 선택지를 리스트 형태로 노출하고 그 중 하나를 선택할 수 있게 하는 태그
+
+```html
+<select>
+	<option>대연</option>
+	<option>나원</option>
+	<option>주원</option>
+	...
+</select>
+```
+
+`textarea` : 여러줄의 텍스트를 입력할 때 사용
+
+```html
+<textarea rows="5" cols="30"></textarea>
+```
+
+`button` : submit, reset, button 3가지의 타입
+
+```html
+<button type="submit|reset|button">버튼<button>
+```
+
+`label` : form 요소의 이름과 form 요소를 명시적으로 연결시켜주기 위해 사용
+
+- form 요소의 id 속성값과 `<label>`의 for 속성값을 같게 적어주어야 한다.
+
+```html
+<label for="name">이름</label> : <input type="text" id="name">
+```
  </div>
 </details>
 
