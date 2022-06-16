@@ -159,6 +159,38 @@
 ```
  </div>
 </details>
+	
+<details>
+
+<summary>JS</summary>
+<div markdown="2">
+ 
+### 🔥 다양한 라이브러리
+
+자바스크립트 언어를 이용해 만든 `React`, `Angular`, `View.js` 같은 프레임워크나 `jQuery` 같은 라이브러리도 있습니다.
+
+<details>
+
+<summary>라이브러리와 프레임워크의 차이</summary>
+<div markdown="1">
+    
+| 라이브러리 | 개발자가 개발하는데 필요한 것들을 모아둔 도구들 <br> ex. 미리 작성된 코드, 변수, 함수, 클래스 |
+| :---: | :----: |
+| 프레임워크 | 개발 시 필수적인 코드, 알고리즘, 데이터베이스 연동 등과 같은  기능을 위해 어느 정도의 뼈대를 제공해주는 것 <br> 개발자는 그 뼈대 위에 코드를 작성하여 애플리케이션을 완성 |
+
+</div>
+</details>
+
+### 제어의 역전
+
+![image](https://user-images.githubusercontent.com/97418768/174070043-67e18781-b898-443b-9459-27d5132f24d0.png)
+	
+![image](https://user-images.githubusercontent.com/97418768/174070074-ec94f921-f132-4097-85a0-5a915bb610b9.png)
+
+---
+	
+ </div>
+</details>
 
 # 📙LikeLion_YU HTML/CSS
  <details>
