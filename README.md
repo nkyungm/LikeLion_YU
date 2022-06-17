@@ -207,6 +207,56 @@
 <body>
     <h1 id="heading">자바스크립트</h1>
     <p id="text">클릭해보세요!</p>
+
+    <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+<script> //jquary
+
+    //자바스크립트를 클릭했을 때 색깔이 변하게
+    //const heading = document.querySelector("#heading") //.은 클래스, #은 id
+    //heading.addEventListener('click',()=>{
+    //    heading.style.color='red';
+    //})
+
+    $('h1#heading').click(function(){
+        $(this).css('color','red');
+    });
+
+
+</script>
+<!-- 요소에 id 속성이 있으면 위치에 상관없이 메서드 
+document.getElementById(id)를 이용해 접근할 수 있다. -->
+
+<div id="elem">
+    <div id="elem-content">Element</div>
+  </div>
+  
+  <script>
+    let elemtext = document.getElementById('elem');
+
+    elemtext.style.textAlign="center";
+  </script>
+
+
+  <!-- elem.querySelectorAll(css)은 요소검색 메서드이다. 
+elem의 자식 요소 중 주어진 CSS 선택자에 대응하는 요소 모두를 반환한다.-->
+
+<ul>
+    <li>1-1</li>
+    <li>1-2</li>
+  </ul>
+  <ul>
+    <li>2-1</li>
+    <li>2-2</li>
+  </ul>
+  <script>
+    let elements = document.querySelectorAll('ul > li:last-child');
+  
+    for (let elem of elements) {
+      alert(elem.innerHTML); 
+    }
+  </script>
+  
+
 </body>
 </html>
 ```
