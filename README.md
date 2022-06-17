@@ -188,6 +188,29 @@
 ![image](https://user-images.githubusercontent.com/97418768/174070074-ec94f921-f132-4097-85a0-5a915bb610b9.png)
 
 ---
+
+### 간단한 자바스크립트 예제 (클릭해서 색 변경)
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *:hover{
+            cursor: default;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="heading">자바스크립트</h1>
+    <p id="text">클릭해보세요!</p>
+</body>
+</html>
+```
+---
 	
  </div>
 </details>
