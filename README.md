@@ -288,7 +288,26 @@ FOO = 456; // TypeError
 let foo = 123;
 foo = 456;
 ```
-	
+
+**❤️‍🔥  화살표 함수**
+
+지금은 ‘함수를 이렇게도 선언할 수 있다’ 정도만 알고 계시면 됩니다!
+
+더 알아보고 싶으신 분들은 아래 링크을 참고해주세요.
+
+```jsx
+// ES5
+let foo = function(){
+	console.log("foo");
+}
+
+// ES6
+let foo = () => console.log("foo");
+```
+
+[[JavaScript - 화살표 함수(Arrow function)](https://velog.io/@ki_blank/JavaScript-%ED%99%94%EC%82%B4%ED%91%9C-%ED%95%A8%EC%88%98Arrow-function)](https://velog.io/@ki_blank/JavaScript-%ED%99%94%EC%82%B4%ED%91%9C-%ED%95%A8%EC%88%98Arrow-function)
+
+---	
  </div>
 </details>
 
