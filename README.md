@@ -289,6 +289,8 @@ let foo = 123;
 foo = 456;
 ```
 
+<summary>토글</summary>
+<div markdown="1">
 ### **스코프**
 
 변수의 유효범위 혹은 생존 범위
@@ -315,6 +317,7 @@ showName();
 
 console.log(name);
 ```
+</div>
 	
 **❤️‍🔥  화살표 함수**
 
