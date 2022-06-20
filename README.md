@@ -289,6 +289,33 @@ let foo = 123;
 foo = 456;
 ```
 
+### **스코프**
+
+변수의 유효범위 혹은 생존 범위
+
+`var` 키워드는 함수 수준의 범위를 가진다
+
+`const`, `let`은 블럭 수준 범위
+
+보통 프로그래밍 언어의 경우 if문 블럭 안에서 변수를 선언하면 해당 블럭 안에서만 유지되지만 자바스크립트는 그렇지 않다
+
+```jsx
+var name = "Kim Jihye";
+
+function showName(){
+	var name = "Kim DaeYeon";
+	if(true){
+		var name = "김대연";
+		console.log(name);
+	}
+	console.log(name);
+}
+
+showName();
+
+console.log(name);
+```
+	
 **❤️‍🔥  화살표 함수**
 
 지금은 ‘함수를 이렇게도 선언할 수 있다’ 정도만 알고 계시면 됩니다!
