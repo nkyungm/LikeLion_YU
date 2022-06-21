@@ -315,6 +315,28 @@ showName();
 
 console.log(name);
 ```
+
+### **호이스팅**
+
+변수 선언과 함수 선언을 끌어올림
+
+```jsx
+console.log(a());
+console.log(b());
+console.log(c());
+
+function a(){
+	return 'a';
+}
+
+var b = function fb(){
+	return 'fb';
+}
+
+var c = function fc(){
+	return 'fc';
+}
+```
 	
 **❤️‍🔥  화살표 함수**
 
