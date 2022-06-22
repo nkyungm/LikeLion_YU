@@ -264,7 +264,7 @@ elem의 자식 요소 중 주어진 CSS 선택자에 대응하는 요소 모두�
 	
 ### 2️⃣  자바스크립트 기초 (ES6)
 
-**❤️‍🔥 변수** 
+**🔥 변수** 
 
 자바스크립트는 `var`, `const`, `let` 의 변수 선언을 지원합니다.
 
@@ -384,11 +384,7 @@ c = function fc(){
  </div>
 </details>
 
-**❤️‍🔥  화살표 함수**
-
-지금은 ‘함수를 이렇게도 선언할 수 있다’ 정도만 알고 계시면 됩니다!
-
-더 알아보고 싶으신 분들은 아래 링크을 참고해주세요.
+**🔥  화살표 함수**
 
 ```jsx
 // ES5
@@ -400,7 +396,7 @@ let foo = function(){
 let foo = () => console.log("foo");
 ```
 
-[[JavaScript - 화살표 함수(Arrow function)](https://velog.io/@ki_blank/JavaScript-%ED%99%94%EC%82%B4%ED%91%9C-%ED%95%A8%EC%88%98Arrow-function)](https://velog.io/@ki_blank/JavaScript-%ED%99%94%EC%82%B4%ED%91%9C-%ED%95%A8%EC%88%98Arrow-function)
+https://velog.io/@ki_blank/JavaScript-%ED%99%94%EC%82%B4%ED%91%9C-%ED%95%A8%EC%88%98Arrow-function
 
 ---	
  </div>
