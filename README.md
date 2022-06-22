@@ -357,6 +357,7 @@ var c = function fc(){
 
 <summary>실제 컴파일</summary>
 <div markdown="1">
+
 ```jsx
 function a(){
 	reutrn 'a';
@@ -377,8 +378,8 @@ c = function fc(){
 	return 'fc';
 }
 ```
- </div>
-</details>
+    </div>
+  </details>
 	
  </div>
 </details>
@@ -404,6 +405,7 @@ let foo = () => console.log("foo");
 ---	
  </div>
 </details>
+
 
 # 📙LikeLion_YU HTML/CSS
  <details>
