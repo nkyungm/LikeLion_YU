@@ -291,8 +291,9 @@ foo = 456;
 
 <details>
 
-<summary>HTML/CSS</summary>
+<summary>토글</summary>
 <div markdown="1">
+
 ### **스코프**
 
 변수의 유효범위 혹은 생존 범위
@@ -319,6 +320,17 @@ showName();
 
 console.log(name);
 ```
+
+<details>
+
+<summary>답</summary>
+<div markdown="1">
+김대연 
+김대연 
+Kim jihye
+ </div>
+</details>
+	
 
 ### **호이스팅**
 
