@@ -296,13 +296,13 @@ foo = 456;
 
 ### **스코프**
 
-변수의 유효범위 혹은 생존 범위
+- 변수의 유효범위 혹은 생존 범위
 
-`var` 키워드는 함수 수준의 범위를 가진다
+- `var` 키워드는 함수 수준의 범위를 가진다
 
-`const`, `let`은 블럭 수준 범위
+- `const`, `let`은 블럭 수준 범위
 
-보통 프로그래밍 언어의 경우 if문 블럭 안에서 변수를 선언하면 해당 블럭 안에서만 유지되지만 자바스크립트는 그렇지 않다
+- 보통 프로그래밍 언어의 경우 if문 블럭 안에서 변수를 선언하면 해당 블럭 안에서만 유지되지만 자바스크립트는 그렇지 않다
 
 ```jsx
 var name = "Kim Jihye";
@@ -325,16 +325,16 @@ console.log(name);
 
 <summary>답</summary>
 <div markdown="1">
-김대연 
-김대연 
-Kim jihye
+김대연<br> 
+김대연<br> 
+Kim jihye<br>
  </div>
 </details>
 	
 
 ### **호이스팅**
 
-변수 선언과 함수 선언을 끌어올림
+- 변수 선언과 함수 선언을 끌어올림
 
 ```jsx
 console.log(a());
@@ -353,6 +353,33 @@ var c = function fc(){
 	return 'fc';
 }
 ```
+<details>
+
+<summary>실제 컴파일</summary>
+<div markdown="1">
+```jsx
+function a(){
+	reutrn 'a';
+}
+
+var b;
+var c;
+
+console.log(a());
+console.log(b());
+console.log(c());
+
+b = function fb(){
+	return 'fb';
+}
+
+c = function fc(){
+	return 'fc';
+}
+```
+ </div>
+</details>
+	
  </div>
 </details>
 
