@@ -399,6 +399,319 @@ let foo = () => console.log("foo");
 https://velog.io/@ki_blank/JavaScript-%ED%99%94%EC%82%B4%ED%91%9C-%ED%95%A8%EC%88%98Arrow-function
 
 ---	
+	
+### 3️⃣  동물 테스트를 만들어보자 (복붙)
+
+오늘은 HTML, CSS에서는 관심을 끄고 **JS**만 집중적으로 볼 것이기 때문에 다른 내용을 미리 제공해드립니다!
+
+`index.html` `style.css` `script.js` 파일을 만들어 아래 내용을 복붙해주세요
+
+- index.html
+    
+    ```html
+    <!DOCTYPE html>
+    <html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>세렝게티</title>
+    
+        <!-- css -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body class="container">
+        <div class="cont title-container">
+            <h1>세렝게티 동물 테스트</h1>
+            <button id="startBtn" class="btn btn-primary">시작하기</button>
+        </div>
+    
+        <div class="cont question-container bg-light">
+            <div class="progress mt-5">
+                <div class="progress-bar" role="progressbar" style="width: calc(100/12*1%)"></div>
+            </div>
+            <h3 id="question" class="mt-5">질문</h3>
+            <p id="type">EI</p>
+            <button id="a" class="btn btn-dark">1</button>
+            <button id="b" class="btn btn-dark">2</button>
+        </div>
+        <div class="cont result-container bg-danger">
+            <h3 id="mbti">MBTI</h3>
+            <p id="explain">설명</p>
+            <img id="result-img" src="" alt="">
+    
+        </div>
+    
+        <div class="score-container">
+            <input id="EI" type="text" class="input" value="0">
+            <input id="SN" type="text" class="input" value="0">
+            <input id="TF" type="text" class="input" value="0">
+            <input id="JP" type="text" class="input" value="0">
+        </div>
+    
+        <!-- js -->
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+        <script type="text/javascript" src="script.js"></script>
+    </body>
+    </html>
+    ```
+    
+- style.css
+    
+    ```css
+    body{
+        width : 100vw;
+        height : 100vh;
+        display: flex;
+    }
+    .cont{
+        width : 100%;
+        height : 100%;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .title-container{
+        margin: auto;
+        background-color: gray;
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .question-container{   
+        display: none;
+    }
+    
+    .btn{
+        width : 300px;
+        margin : 10px;
+    }
+    
+    .score-container{
+        position:absolute;
+        display: flex;
+        flex-direction: column;
+        bottom: 5%;
+        display: none;
+    }
+    
+    .result-container{
+        display: none;
+    }
+    
+    #result-img{
+        width : 50%;
+    }
+    
+    #type{
+        display: none;
+    }
+    ```
+    
+- script.js
+    
+    ```jsx
+    const titleContainer = document.querySelector(".title-container");
+    const titleBtn = document.querySelector("#startBtn");
+    const questionContainer = document.querySelector('.question-container');
+    const question = document.querySelector('#question');
+    const type = document.querySelector('#type');
+    const aBtn = document.querySelector("#a");
+    const bBtn = document.querySelector('#b');
+    const EI = document.querySelector('#EI');
+    const SN = document.querySelector('#SN');
+    const TF = document.querySelector("#TF");
+    const JS = document.querySelector("#JP");
+    const pro = document.querySelector('.progress-bar');
+    const MBTI = document.querySelector('#mbti');
+    const explain = document.querySelector('#explain');
+    const image = document.querySelector('#result-img');
+    const resultContainer = document.querySelector('.result-container');
+    
+    const q = {
+        1: {
+            "title": "문제 1번", 
+            "type": "EI", 
+            "A": "E", 
+            "B": "I"
+        },
+        2: {"title": "문제 2번", "type": "EI", "A": "E", "B": "I"},
+        3: {"title": "문제 3번", "type": "EI", "A": "E", "B": "I"},
+        4: {"title": "문제 4번", "type": "SN", "A": "S", "B": "N"},
+        5: {"title": "문제 5번", "type": "SN", "A": "S", "B": "N"},
+        6: {"title": "문제 6번", "type": "SN", "A": "S", "B": "N"},
+        7: {"title": "문제 7번", "type": "TF", "A": "T", "B": "F"},
+        8: {"title": "문제 8번", "type": "TF", "A": "T", "B": "F"},
+        9: {"title": "문제 9번", "type": "TF", "A": "T", "B": "F"},
+        10: {"title": "문제 10번", "type": "JP", "A": "J", "B": "P"},
+        11: {"title": "문제 11번", "type": "JP", "A": "J", "B": "P"},
+        12: {"title": "문제 12번", "type": "JP", "A": "J", "B": "P"}
+    }
+    const result = {
+        "ISTJ": {
+            "animal": "하마", 
+            "explain": "하마 설명", 
+            "img": "lion.jpg"
+        },
+        "ISFJ": {"animal": "부엉이", "explain": "부엉이 설명", "img": "lion.jpg"},
+        "INFJ": {"animal": "물소", "explain": "물소 설명", "img": "lion.jpg"},
+        "INTJ": {"animal": "치타", "explain": "치타 설명", "img": "lion.jpg"},
+        "ISTP": {"animal": "나무늘보", "explain": "나무늘보 설명", "img": "lion.jpg"},
+        "ISFP": {"animal": "거북이", "explain": "거북이 설명", "img": "lion.jpg"},
+        "INFP": {"animal": "코끼리", "explain": "코끼리 설명", "img": "lion.jpg"},
+        "INTP": {"animal": "침팬지", "explain": "침팬지 설명", "img": "lion.jpg"},
+        "ESTP": {"animal": "악어", "explain": "악어 설명", "img": "lion.jpg"},
+        "ESFP": {"animal": "미어캣", "explain": "미어캣 설명", "img": "lion.jpg"},
+        "ENFP": {"animal": "멋쟁이 사자", "explain": "멋쟁이 사자 설명", "img": "lion.jpg"},
+        "ENTP": {"animal": "태양새", "explain": "태양새 설명", "img": "lion.jpg"},
+        "ESTJ": {"animal": "기린", "explain": "기린 설명", "img": "lion.jpg"},
+        "ESFJ": {"animal": "고릴라", "explain": "고릴라 설명", "img": "lion.jpg"},
+        "ENFJ": {"animal": "카피바라", "explain": "카피바라 설명", "img": "lion.jpg"},
+        "ENTJ": {"animal": "호랑이", "explain": "호랑이 설명", "img": "lion.jpg"}
+    }
+    
+    let num = 1;
+    
+    // 여기까지만 사전 제공
+    ```
+    
+    ```jsx
+    const titleContainer = document.querySelector(".title-container");
+    const titleBtn = document.querySelector("#startBtn");
+    const questionContainer = document.querySelector('.question-container');
+    const question = document.querySelector('#question');
+    const type = document.querySelector('#type');
+    const aBtn = document.querySelector("#a");
+    const bBtn = document.querySelector('#b');
+    const EI = document.querySelector('#EI');
+    const SN = document.querySelector('#SN');
+    const TF = document.querySelector("#TF");
+    const JS = document.querySelector("#JP");
+    const pro = document.querySelector('.progress-bar');
+    const MBTI = document.querySelector('#mbti');
+    const explain = document.querySelector('#explain');
+    const image = document.querySelector('#result-img');
+    const resultContainer = document.querySelector('.result-container');
+    
+    const q = {
+        1: {
+            "title": "문제 1번", 
+            "type": "EI", 
+            "A": "E", 
+            "B": "I"
+        },
+        2: {"title": "문제 2번", "type": "EI", "A": "E", "B": "I"},
+        3: {"title": "문제 3번", "type": "EI", "A": "E", "B": "I"},
+        4: {"title": "문제 4번", "type": "SN", "A": "S", "B": "N"},
+        5: {"title": "문제 5번", "type": "SN", "A": "S", "B": "N"},
+        6: {"title": "문제 6번", "type": "SN", "A": "S", "B": "N"},
+        7: {"title": "문제 7번", "type": "TF", "A": "T", "B": "F"},
+        8: {"title": "문제 8번", "type": "TF", "A": "T", "B": "F"},
+        9: {"title": "문제 9번", "type": "TF", "A": "T", "B": "F"},
+        10: {"title": "문제 10번", "type": "JP", "A": "J", "B": "P"},
+        11: {"title": "문제 11번", "type": "JP", "A": "J", "B": "P"},
+        12: {"title": "문제 12번", "type": "JP", "A": "J", "B": "P"}
+    }
+    const result = {
+        "ISTJ": {
+            "animal": "하마", 
+            "explain": "하마 설명", 
+            "img": "lion.jpg"
+        },
+        "ISFJ": {"animal": "부엉이", "explain": "부엉이 설명", "img": "lion.jpg"},
+        "INFJ": {"animal": "물소", "explain": "물소 설명", "img": "lion.jpg"},
+        "INTJ": {"animal": "치타", "explain": "치타 설명", "img": "lion.jpg"},
+        "ISTP": {"animal": "나무늘보", "explain": "나무늘보 설명", "img": "lion.jpg"},
+        "ISFP": {"animal": "거북이", "explain": "거북이 설명", "img": "lion.jpg"},
+        "INFP": {"animal": "코끼리", "explain": "코끼리 설명", "img": "lion.jpg"},
+        "INTP": {"animal": "침팬지", "explain": "침팬지 설명", "img": "lion.jpg"},
+        "ESTP": {"animal": "악어", "explain": "악어 설명", "img": "lion.jpg"},
+        "ESFP": {"animal": "미어캣", "explain": "미어캣 설명", "img": "lion.jpg"},
+        "ENFP": {"animal": "멋쟁이 사자", "explain": "멋쟁이 사자 설명", "img": "lion.jpg"},
+        "ENTP": {"animal": "태양새", "explain": "태양새 설명", "img": "lion.jpg"},
+        "ESTJ": {"animal": "기린", "explain": "기린 설명", "img": "lion.jpg"},
+        "ESFJ": {"animal": "고릴라", "explain": "고릴라 설명", "img": "lion.jpg"},
+        "ENFJ": {"animal": "카피바라", "explain": "카피바라 설명", "img": "lion.jpg"},
+        "ENTJ": {
+            "animal": "호랑이", 
+            "explain": "호랑이 설명", 
+            "img": "lion.jpg"
+        }
+    }
+    
+    let num = 1;
+    let mbti = '';
+    
+    // 여기까지만 사전 제공
+    
+    titleBtn.addEventListener('click', ()=>{
+        titleContainer.style.display = 'none';
+        questionContainer.style.display = 'block';
+        updateQuestion();
+    });
+    
+    aBtn.addEventListener('click', ()=>{
+        switch(type.innerHTML){
+            case 'EI' :
+                let e = parseInt(EI.value);
+                EI.setAttribute('value', e+1);
+                break;
+            case 'SN':
+                let s = parseInt(SN.value);
+                SN.setAttribute('value', s+1);
+                break;
+            case 'TF':
+                let t = parseInt(TF.value);
+                TF.setAttribute('value', t+1);
+                break;
+            case 'JP':
+                let j = parseInt(JP.value);
+                JP.setAttribute('value', j+1);
+                break;
+        }
+        updateQuestion();
+    });
+    
+    bBtn.addEventListener('click', ()=>{
+        updateQuestion();
+    });
+    
+    function updateQuestion(){
+        if(num == 13){
+            questionContainer.style.display = 'none';
+            resultContainer.style.display = 'block';
+    
+            (EI.value > 2 ? mbti+='E' : mbti+='I');
+            (SN.value > 2 ? mbti+='S' : mbti+='N');
+            (TF.value > 2 ? mbti+='T' : mbti+='F');
+            (JP.value > 2 ? mbti+='J' : mbti+='P');
+    
+            MBTI.innerHTML = mbti;
+            explain.innerHTML = result[mbti].explain;
+            image.setAttribute('src', result[mbti].img);
+    
+            // if(EI.value > 2){
+            //     mbti += 'E';
+            // }
+            // else{
+            //     mbti += 'I';
+            // }
+        }
+        else{
+            pro.setAttribute('style', `width : calc(100/12*${num}%);`);
+            question.innerHTML = q[num].title;
+            type.innerHTML = q[num].type;
+            aBtn.innerHTML = q[num].A;
+            bBtn.innerHTML = q[num].B;
+            num++;
+        }
+    }
+    ```
  </div>
 </details>
 
