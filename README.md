@@ -41,7 +41,8 @@
     
 - 블록 요소인 태그 종류
     
-    `article` `aside` `div` `footer` `form` `h1` `h2` `h3` `h4` `h5` `h6` `header` `p` `section` `table` `ul` 등
+    `article` `aside` `div` `footer` `form` `h1` `h2` `h3` `h4` `h5` `h6` `header` `p` `section` `table` `ul` 등.
+	
  ---
  
  ### ⭐인라인 요소 (Inline Element)
