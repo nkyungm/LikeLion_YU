@@ -720,6 +720,50 @@ https://velog.io/@ki_blank/JavaScript-%ED%99%94%EC%82%B4%ED%91%9C-%ED%95%A8%EC%8
 
 <summary>React</summary>
 <div markdown="3">
+## ES6
+### 0️⃣  가변 변수와 불변 변수
+
+가변 변수를 위한 `let` 키워드, 값을 수정할 수 없는 불변 변수를 위한 `const` 키워드를 사용합니다.
+
+**가변 변수**는 변수를 읽거나 수정할 수 있습니다.
+
+```jsx
+// 가변 변수 let
+
+let num = -1;
+num = num * 3;
+
+let str = '이건 문자';
+str = '다른 문자';
+
+let arr = [];
+arr [ 1,2,3,];
+
+let obj = {};
+obj = { name : '새로운 객체' };
+```
+
+**불변 변수**는 선언한 후 읽기만 가능합니다. 그런데 값을 다시 할당할 수 없는 것이지 값을 변경할 순 있습니다. 
+
+하지만 불변 변수로 정의된 배열이나 객체를 내장 함수로 수정하는 것은 **무결성**을 해치는 일이므로 새로운 불변 변수를 만들어 새값을 할당해주는 방법으로 새로 정의해줘야 합니다.
+
+가변 내장 함수(push, splice, pop, shift)보다 아래 무결성 내장 함수를 사용해보세요-! ~~(더 좋은 방법은 let을 쓰시는..)~~
+
+- `concat()`
+- `slice()`
+
+```jsx
+// 불변 변수 const 
+
+const num = 1;
+num = 3; // TypeError
+
+// const를 변경할 수 있는 경우
+const arr2 = [];
+arr2.push(1); // arr2 = [1];
+arr2.splice(0,0,0); // arr2 = [0,1];
+```
+
 
 </div>
 </details>
