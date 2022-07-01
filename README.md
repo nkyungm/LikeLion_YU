@@ -766,7 +766,7 @@ arr2.push(1); // arr2 = [1];
 arr2.splice(0,0,0); // arr2 = [0,1];
 ```
 
-
+3
 </div>
 </details>
 
