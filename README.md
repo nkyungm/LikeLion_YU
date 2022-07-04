@@ -765,8 +765,183 @@ const arr2 = [];
 arr2.push(1); // arr2 = [1];
 arr2.splice(0,0,0); // arr2 = [0,1];
 ```
+### 1️⃣  템플릿 문자열
 
-3
+**템플릿 문자열**은 문자열 안에 변수와 연산식을 혼합하여 사용합니다.
+
+기존 자바스크립트는 문자열과 변수를 연결하기 위해서 병합 연산자(+)를 사용해야했습니다.
+
+ES6부터는 템플릿 문자열을 도입해 **백틱(`)**으로 문자열을 표현합니다.
+
+**특수 기호 $** 를 사용하여 변수를 포함할 수도 있습니다.
+
+```jsx
+const product = { name : '검정 반팔', price : '25000원' };
+
+let message = '제품 ' + product.name + '의 가격은 ' + product.price + '입니다.'; // 이전
+
+message = `제품 ${product.name}의 가격은 ${product.price}입니다.`; // ES6
+```
+
+---
+
+### 2️⃣  전개 연산자 Spread Operator
+
+**전개 연산자**는 나열형 자료를 추출하거나 연결할 때 사용합나디. 
+
+사용 방법은 배열이나 객체, 변수명 앞에 **마침표 세 개 ...** 를 입력합니다.
+
+중요한 점은 **배열, 객체, 함수 인자 표현식** 안에서만 사용해야하다는 것!
+
+```jsx
+// 배열
+
+const arr1 = ['one', 'two'];
+const arr2 = ['three', 'four'];
+
+let arr3 = [ arr1[0], arr1[1], arr2[0], arr[1] ]; // 과거
+
+arr3 = [ ...arr1, ...arr2 ]; // ES6
+
+const [ one, two, three = 'empty', ...others ] = arr1;
+// one = 'one' , two = 'two', three = 'empty' , others = []
+```
+
+```jsx
+// 객체
+
+let obj1 = { one : 1, two : 2, other : 0 };
+
+let obj2 = { three : 3, four : 4, other : -1 };
+
+let comb = { ...obj1, ... obj2 };
+// comb = { one : 1, two : 2, three : 3, four : 4, other : -1 };
+
+comb = { ...obj2, ...obj1 };
+// comb = [ one : 1, two : 2, three : 3, four : 4, other : 0 };
+
+let { other , others } = comb;
+// other =  0
+// others = { one : 1, two : 2, three : 3, four : 4 }
+```
+
+---
+
+### 3️⃣  클래스
+
+```jsx
+function Shape(x,y){
+	this.name = "Shape";
+  this.move(x,y);
+}
+
+Shape.create = function(x,y) { return new Shape(x,y); };
+
+Shape.prototype.move = function(x,y) {
+	this.x = x;
+	this.y = y;
+}
+
+// 혹은
+Shape.prototype = {
+	move : function(x,y) {
+		this.x = x;
+		this.y = y;
+	}
+};
+
+var s = new Shape(0,0);
+```
+
+```jsx
+class Shape {
+	static create(x,y) { return new Shape(x,y); }
+	name = "Shape";
+
+  constructor(x,y) {
+		this.move(x,y);
+	}
+	move(x,y){
+		this.x = x;
+		this.y = y;
+	}
+}
+
+class Circle extends Shape{
+	constructor(x,y,radius) {
+		super(x,y);
+		this.radius = radius;
+	}
+}
+```
+
+---
+
+### 4️⃣  화살표 함수
+
+**화살표 함수**는 **화살표 기호 ⇒** 로 함수를 선언합니다. 
+
+```jsx
+function func(name){
+	return "안녕 " + name;
+}
+
+console.log(func('영희');
+
+// 화살표 함수를 사용하면
+
+const func = (name) => {
+	return `안녕 ${name}`;
+}
+
+console.log(func('영희'));
+
+// 함수 코드가 한 줄인 경우 아래처럼 {}와 return을 생략할수 있습니다.
+
+const func = (name) => `안녕 ${name}`;
+
+```
+
+---
+
+### 5️⃣  forEach()
+
+주어진 함수를 배열 요소 각각에 대해 실행
+
+```jsx
+const arr = ['a', 'b', 'c' ];
+
+arr.forEach(element => console.log(element));
+```
+
+### 6️⃣  map()
+
+배열 내의 모든 요소 각각에 대하여 주어진 함수를 호출한 결과를 모아 새로운 배열을 반환
+
+```jsx
+const arr = [1,3,5,7];
+
+const map = arr.map(x => x *2);
+
+console.log(map);
+```
+
+### 7️⃣  reduce()
+
+배열의 각 요소에 대해 주어진 리듀서 함수를 실행하고 하나의 결과값을 반환
+
+```jsx
+const arr = [1,3,5,7];
+
+const initalValue = 0;
+
+const sum = arr.reduce( (prev, curr) => prev + curr , initValue);
+
+console.log(sum);
+```
+
+---
+
 </div>
 </details>
 
