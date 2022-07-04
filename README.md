@@ -783,7 +783,6 @@ let message = '제품 ' + product.name + '의 가격은 ' + product.price + '입
 message = `제품 ${product.name}의 가격은 ${product.price}입니다.`; // ES6
 ```
 
----
 
 ### 2️⃣  전개 연산자 Spread Operator
 
@@ -824,8 +823,6 @@ let { other , others } = comb;
 // other =  0
 // others = { one : 1, two : 2, three : 3, four : 4 }
 ```
-
----
 
 ### 3️⃣  클래스
 
@@ -875,8 +872,6 @@ class Circle extends Shape{
 }
 ```
 
----
-
 ### 4️⃣  화살표 함수
 
 **화살표 함수**는 **화살표 기호 ⇒** 로 함수를 선언합니다. 
@@ -902,7 +897,6 @@ const func = (name) => `안녕 ${name}`;
 
 ```
 
----
 
 ### 5️⃣  forEach()
 
