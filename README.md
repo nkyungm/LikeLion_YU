@@ -721,7 +721,7 @@ https://velog.io/@ki_blank/JavaScript-%ED%99%94%EC%82%B4%ED%91%9C-%ED%95%A8%EC%8
 <summary>React</summary>
 <div markdown="3">
 
-<detail>
+<details>
 	
 <summary>ES6</summary>
 <div markdown="1">
@@ -937,8 +937,46 @@ const sum = arr.reduce( (prev, curr) => prev + curr , initValue);
 console.log(sum);
 ```
 
----
-    </div>
+</div>
+</details>
+
+<details>
+	
+<summary>React 설치하기</summary>
+<div markdown="2">
+	
+### 1️⃣  node.js 다운로드
+아래 링크에서 node.js 다운받기
+[Node.js](https://nodejs.org/en/)
+
+### 2️⃣  터미널을 열고 npm 이 다운되었는지 확인
+
+`**npm -v`** 입력해서 잘 설치되었는지 확인
+![image](https://user-images.githubusercontent.com/97418768/177555334-adac71e1-23d6-4e28-b374-2529e7995e45.png)
+`**npm install -g create-react-app**`
+
+### 3️⃣  react 실행하기
+원하는 폴더 이름으로 react 초기 파일을 생성해보겠습니다. 
+
+자신이 원하는 폴더로 이동해서 
+
+`**create-react-app 프로젝트 이름**`
+
+`**cd 프로젝트 이름**`
+
+`**npm start**`
+
+웹에 이런 창이 뜨시면 성공입니다.
+
+창이 안 뜨면 [localhost:3000](http://localhost:3000) 으로 접속해보세요!
+
+⭐  **확인 끝나시면 터미널에서 `ctrl + c` 또는 `cmd + c` 로 종료해주세요!** 
+
+![image](https://user-images.githubusercontent.com/97418768/177555484-b5407863-b83b-4a23-873e-366fc08eddcd.png)
+
+
+	
+</div>
 </details>
 	
 </div>
