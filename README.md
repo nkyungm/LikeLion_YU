@@ -975,8 +975,67 @@ console.log(sum);
 
 ![image](https://user-images.githubusercontent.com/97418768/177555484-b5407863-b83b-4a23-873e-366fc08eddcd.png)
 
+</div>
+</details>
 
-	
+<details>
+<summary>Component</summary>
+<div markdown="3">
+### **React**
+
+"컴포넌트" 라는 개념에 집중이 되어있는 라이브러리입니다.
+
+복잡한 코드를 사용자 정의 태그(component)를 통해 표현
+
+1. 가독성
+2. 재사용성
+3. 유지보수 (변경된 내용이 모든 사용 파일에서 업로드)
+
+pure.html
+
+```jsx
+<html>
+    <body>
+        <header>
+            <h1>WEB</h1>
+            world wide web!
+        </header>
+
+        <nav>
+            <ul>
+                <li><a href="1.html">HTML</a></li>
+                <li><a href="2.html">CSS</a></li>
+                <li><a href="3.html">JavaScript</a></li>
+            </ul>
+        </nav>
+
+        <article>
+            <h2>HTML</h2>
+            HTML is HyperText Markup Language.
+        </article>
+    </body>
+</html>
+```
+
+### 새로운 컴포넌트 만들기
+
+새로운 컴포넌트를 만들어 App 컴포넌트에 넣어봅시다
+
+```jsx
+import { Component } from 'react';
+
+class App extends Component{ 
+  render() {
+      return (
+        <div className="App">
+					{/*컴포넌트 넣기*/}
+        </div>
+      );
+  }
+}
+export default App;
+```
+
 </div>
 </details>
 	
