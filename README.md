@@ -720,8 +720,10 @@ https://velog.io/@ki_blank/JavaScript-%ED%99%94%EC%82%B4%ED%91%9C-%ED%95%A8%EC%8
 
 <summary>React</summary>
 <div markdown="3">
-	
-## ES6
+
+<detail>
+<summary>ES6</summary>
+<div markdown="1">
 	
 ### 0️⃣  가변 변수와 불변 변수
 
@@ -935,7 +937,9 @@ console.log(sum);
 ```
 
 ---
-
+ </div>
+</details>
+	
 </div>
 </details>
 
