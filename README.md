@@ -941,7 +941,6 @@ console.log(sum);
 </details>
 
 <details>
-	
 <summary>React 설치하기</summary>
 <div markdown="2">
 	
@@ -952,7 +951,9 @@ console.log(sum);
 ### 2️⃣  터미널을 열고 npm 이 다운되었는지 확인
 
 `**npm -v`** 입력해서 잘 설치되었는지 확인
+	
 ![image](https://user-images.githubusercontent.com/97418768/177555334-adac71e1-23d6-4e28-b374-2529e7995e45.png)
+	
 `**npm install -g create-react-app**`
 
 ### 3️⃣  react 실행하기
