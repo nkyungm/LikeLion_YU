@@ -1029,7 +1029,7 @@ class App extends Component{
   render() {
       return (
         <div className="App">
-					{/*컴포넌트 넣기*/}
+	  {/*컴포넌트 넣기*/}
         </div>
       );
   }
